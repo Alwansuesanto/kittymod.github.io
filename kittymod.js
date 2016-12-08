@@ -12,7 +12,13 @@ var musicPlayer;
 
 var originalDeath;
 
-function init(modVersion) {
+function init() {
+    var originalFunc = MC._onAgarioCoreLoaded;
+    MC._onAgarioCoreLoaded = function(){init2();};
+    MC._onAgarioCoreLoaded = originalFunc;
+}
+
+function init2(modVersion) {
 
     // change buttons styles
     $("button:contains('Spectate')").html('<span class="glyphicon glyphicon-globe"></span>').attr('data-toggle', "tooltip").prop('title', 'Spectate');
