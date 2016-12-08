@@ -656,6 +656,8 @@ function searchIPHandler(searchStr) {
         findIP(searchStr.replace("agar.io/?search=ws://", ""));
     } else if (isValidIpAndPort(searchStr.replace("http://agar.io/?search=ws://", ""))) {
         findIP(searchStr.replace("http://agar.io/?search=ws://", ""));
+    } else if (isValidIpAndPort(searchStr.replace("http://agar.io/?sip=", ""))) {
+        findIP(searchStr.replace("http://agar.io/?sip=", ""));
     } else if (getParameterByName("search", searchStr)) {
 
         var region = getParameterByName("r", searchStr);
