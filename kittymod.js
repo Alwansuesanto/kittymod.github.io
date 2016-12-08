@@ -127,11 +127,6 @@ setTimeout(function(){
                                  '<a id="copyIPBtn" href="javascript:void(0);" class="btn btn-sm btn-copy-leaderboard btn-info" style="background-color: transparent; width: 100%;text-shadow: rgb(0, 0, 0) 0.3px 0.3px;font-size: small;margin-top: 0px;display: block;border: none; user-drag: none; user-select: none; -moz-user-select: none; -webkit-user-drag: none; -webkit-user-select: none; -ms-user-select: none;" data-toggle="tooltip" data-placement="left" data-original-title="Copy IP address">IP</a>'+
                                  '</div>'+
 
-                                 /*
-                                 '<div id="dropDown2" class="hud" style="position: absolute;pointer-events: auto;width: 33%;height: 29px;right: 0px;padding: 0px;border-radius: 0px;">'+
-                                 '<a id="createPartyBtn" href="javascript:void(0);" class="btn btn-sm btn-copy-leaderboard btn-info" style="background-color: transparent;width: 100%;text-shadow: rgb(0, 0, 0) 0.3px 0.3px;font-size: small;margin-top: 0px;display: block;border: none; user-drag: none; user-select: none; -moz-user-select: none; -webkit-user-drag: none; -webkit-user-select: none; -ms-user-select: none;" data-toggle="tooltip" data-placement="left" data-original-title="Create party"><span class="glyphicon glyphicon-plus"></span></a>'+
-                                  '</div>'+
-                                  */
                                  '<input id="tempCopy" style="display: none;" value="">'+
                                  '</div>');
 
