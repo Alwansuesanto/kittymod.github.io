@@ -15,6 +15,7 @@ var musicPlayer;
 
 var originalDeath;
 
+function init() {
 setTimeout(function(){
 
     // change buttons styles
@@ -579,7 +580,7 @@ setTimeout(function(){
     toastr["info"]('Don\'t forget to share! </br>My website: <a target="_blank" href="https://kindkitty.github.io/OGARio-KITTY-mod/">LINK</a>');
 
 }, 6000);
-
+}
 
 var searching;
 var timerId;
