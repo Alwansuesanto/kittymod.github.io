@@ -13,7 +13,6 @@ var musicPlayer;
 var originalDeath;
 
 function init(modVersion) {
-setTimeout(function(){
 
     // change buttons styles
     $("button:contains('Spectate')").html('<span class="glyphicon glyphicon-globe"></span>').attr('data-toggle', "tooltip").prop('title', 'Spectate');
@@ -563,8 +562,6 @@ setTimeout(function(){
     // ANNOUNCEMENTS
     toastr["info"]('KITTY mod v'+modVersion+': Fixed autorespawn and auto free coins!! Enjoy! :D');
     toastr["info"]('Don\'t forget to share! </br>My website: <a target="_blank" href="https://kindkitty.github.io/OGARio-KITTY-mod/">LINK</a>');
-
-}, 500);
 }
 
 var searching;
