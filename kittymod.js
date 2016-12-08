@@ -246,13 +246,6 @@ setTimeout(function(){
 
     $("#time-hud").attr("style", "top: 290px !important;");
 
-    // fix time
-    /*if($("#showTime").is(':checked')) {
-        $("#time-hud").show();
-    } else {
-        $("#time-hud").hide();
-    }*/
-
     // fix leaderboard buttons
     $("#leaderboard-menu").css("pointer-events", "auto");
     $("#searchHud").css("pointer-events", "auto");
