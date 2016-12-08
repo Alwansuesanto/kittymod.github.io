@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         KITTY mod v2 (OGARio v3)
 // @namespace    ogario.v2
-// @version      2.6.11
+// @version      2.6.12
 // @description  OGARio - KITTY mod v2
 // @author       szymy and KITTY (mod only)
 // @icon         https://kittymod.github.io/mod/logo.png
@@ -20,7 +20,7 @@ if (location.host == "agar.io" && location.pathname == "/") {
     location.href = "http://agar.io/ogario" + window.location.search + location.hash;
     //return;
 }
-//test
+function lol(){alert("lol");}
 var ogarioCSS =     '<link href="http://cdn.ogario.ovh/v3/ogario.v3.css?v=300" rel="stylesheet"></link>';
 var ogarioSniffJS = '<script src="http://cdn.ogario.ovh/v3/ogario.v3.sniff.js?v=300"></script>';
 var ogarioJS =      '<script src="http://cdn.ogario.ovh/v3/ogario.v3.js?v=300" charset="utf-8"></script>';
