@@ -67,6 +67,22 @@ setTimeout(function(){
                             '<iframe id="musicFrame" width="320" height="180" src="' + getEmbedUrl(initialMusicUrl) + '" frameborder="0" allowfullscreen=""></iframe>' +
                             '<input id="musicUrl" onclick="$(this).select();" type="text" value="'+initialMusicUrl+'" class="form-control" data-toggle="tooltip" data-placement="right" data-original-title="Paste your video/playlist here"></div></div>');
 
+    if (typeof YT !== 'undefined') {
+        musicPlayer = new YT.Player('musicFrame',{
+            events: {
+                'onStateChange': function(state) {
+                    if (state.data == 1) {
+                        $("#playerI").removeClass("fa-play-circle").addClass("fa-pause-circle");
+                        $("#playerBtn").attr('data-original-title', "Pause").tooltip('fixTitle');
+                    } else {
+                        $("#playerI").removeClass("fa-pause-circle").addClass("fa-play-circle");
+                        $("#playerBtn").attr('data-original-title', "Play").tooltip('fixTitle');
+                    }
+                }
+            }
+        });
+    }
+
     // prevent edit
     $("#musicUrl").on("input",function(){ $(this).attr("maxlength","0");});
 
@@ -1073,22 +1089,4 @@ function getEmbedUrl(url) {
         return false;
     }
 
-}
-
-function onYouTubeIframeAPIReady() {
-        if (typeof YT !== 'undefined') {
-        musicPlayer = new YT.Player('musicFrame',{
-            events: {
-                'onStateChange': function(state) {
-                    if (state.data == 1) {
-                        $("#playerI").removeClass("fa-play-circle").addClass("fa-pause-circle");
-                        $("#playerBtn").attr('data-original-title', "Pause").tooltip('fixTitle');
-                    } else {
-                        $("#playerI").removeClass("fa-pause-circle").addClass("fa-play-circle");
-                        $("#playerBtn").attr('data-original-title', "Play").tooltip('fixTitle');
-                    }
-                }
-            }
-        });
-    }
 }
