@@ -207,7 +207,7 @@ setTimeout(function(){
     var ogarioVersion = $("#menu-footer").text().split("| ")[1];
     $("#menu-footer").text("");
     // kitty footer
-    $("#menu-footer").prepend('<span style="float: left; font-size: 13px;"><a target="_blank" onclick="ga(\'send\', \'event\', \'Link\', \'click\', \'kittyWebsite\');" href="https://kindkitty.github.io/OGARio-KITTY-mod/" style="color: #ffffff;" data-toggle="tooltip" data-title="KITTY Website" data-placement="left">KITTY mod v' + modVersion + '</a></span>' +
+    $("#menu-footer").prepend('<span style="float: left; font-size: 13px;"><a target="_blank" onclick="ga(\'send\', \'event\', \'Link\', \'click\', \'kittyWebsite\');" href="https://kittymod.github.io/" style="color: #ffffff;" data-toggle="tooltip" data-title="KITTY Website" data-placement="left">KITTY mod v' + modVersion + '</a></span>' +
                               '<a href="http://ogario.ovh" target="_blank">OGARio</a> ' + ogarioVersion);
 
     // donate button
@@ -562,7 +562,7 @@ setTimeout(function(){
 
     // ANNOUNCEMENTS
     toastr["info"]('KITTY mod v'+modVersion+': Fixed issue where mod was not loading! Mod loads faster now!! Enjoy! :D');
-    toastr["info"]('Don\'t forget to share! </br>My website: <a target="_blank" href="https://kindkitty.github.io/OGARio-KITTY-mod/">LINK</a>');
+    toastr["info"]('Don\'t forget to share! </br>My website: <a target="_blank" href="https://kittymod.github.io/">LINK</a>');
 
 }, 500);
 }
