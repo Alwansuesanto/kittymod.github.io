@@ -504,7 +504,7 @@ setTimeout(function(){
     });
 
     $("#stats-hud").after('<div id="cur-tk-hud" class="hud main-color hud-top" style=" right: 220px; font-size: 15px; padding: 6px;"></div>');
-    $("#minimap-hud").before('<div id="player-hud" class="hud" style="bottom: 230px;right: 10px; width: 30px;height: 30px;padding: 0px;pointer-events: auto;">' +
+    $("#minimap-hud").prepend('<div id="player-hud" class="hud" style="width: 30px;height: 30px;padding: 0px;pointer-events: auto; position: absolute; position: absolute; right: 0px; top: -30px;">' +
                              '<button id="playerBtn" class="btn-link" style="padding: 0px; color: #d6d3d3; width: 100%; height: 100%;" data-toggle="tooltip" data-original-title="Play">' +
                              '<i id="playerI" class="fa fa-play-circle" style="padding-left: 0px;"></i></button></div>');
 
