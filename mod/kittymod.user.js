@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         KITTY mod v2 (OGARio v3)
 // @namespace    ogario.v2
-// @version      2.6.10
+// @version      2.6.11
 // @description  OGARio - KITTY mod v2
 // @author       szymy and KITTY (mod only)
 // @icon         https://kittymod.github.io/mod/logo.png
