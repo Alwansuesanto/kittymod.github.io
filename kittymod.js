@@ -12,7 +12,7 @@ var musicPlayer;
 
 var originalDeath;
 
-function init() {
+function init(modVersion) {
 setTimeout(function(){
 
     // change buttons styles
