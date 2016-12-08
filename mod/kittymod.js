@@ -561,7 +561,7 @@ setTimeout(function(){
     $("#kittyAds").load("https://raw.githubusercontent.com/KindKitty/OGARio-KITTY-mod/master/banner.html");
 
     // ANNOUNCEMENTS
-    toastr["info"]('KITTY mod v'+modVersion+': Mod loads faster now!! Enjoy! :D');
+    toastr["info"]('KITTY mod v'+modVersion+': Fixed issue where mod was not loading! Mod loads faster now!! Enjoy! :D');
     toastr["info"]('Don\'t forget to share! </br>My website: <a target="_blank" href="https://kindkitty.github.io/OGARio-KITTY-mod/">LINK</a>');
 
 }, 500);
