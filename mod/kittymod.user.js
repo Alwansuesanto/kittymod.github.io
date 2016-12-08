@@ -5,9 +5,9 @@
 // @version      2.6.10
 // @description  OGARio - KITTY mod v2
 // @author       szymy and KITTY (mod only)
-// @icon         http://i.imgur.com/TBcj4RM.png
+// @icon         https://kittymod.github.io/mod/logo.png
 // @match        http://agar.io/*
-// @updateURL    https://raw.githubusercontent.com/KindKitty/OGARio-KITTY-mod/master/js/OGARio%20-%20KITTY%20mod.user.js
+// @updateURL    https://kittymod.github.io/mod/kittymod.user.js
 // @run-at       document-start
 // @grant        GM_xmlhttpRequest
 // @connect      agar.io
