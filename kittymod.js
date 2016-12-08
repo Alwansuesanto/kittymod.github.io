@@ -12,14 +12,10 @@ var musicPlayer;
 
 var originalDeath;
 
-function init() {
-    var originalFunc = MC._onAgarioCoreLoaded;
-    MC._onAgarioCoreLoaded = function(){init2();};
-    MC._onAgarioCoreLoaded = originalFunc;
-}
+function init(modVersion) {
 
-function init2(modVersion) {
-
+    setTimeout(function(){
+        
     // change buttons styles
     $("button:contains('Spectate')").html('<span class="glyphicon glyphicon-globe"></span>').attr('data-toggle', "tooltip").prop('title', 'Spectate');
     $("button:contains('Logout')").html('<span class="glyphicon glyphicon-off"></span>').attr('data-toggle', "tooltip").prop('title', 'Logout');
@@ -533,27 +529,28 @@ function init2(modVersion) {
     // fix main menu placement after stats
     $("#statsContinue2").click(function(){$("#main-menu > ul > li.start-tab > a").click()});
 
-    // save original death function
-    originalDeath = MC.onPlayerDeath;
+        // save original death function
+        originalDeath = MC.onPlayerDeath;
 
-    // remove leaderboard setting
-    $("#normalLb").parent().remove();
-    $("#leaderboard-hud > h4").text("v.ht/kittymod");
+        // remove leaderboard setting
+        $("#normalLb").parent().remove();
+        $("#leaderboard-hud > h4").text("v.ht/kittymod");
 
-    // fix party stuff
-    $('#gamemode').on('change', function() {
-        if (this.value == ":party") {$("#create-party-btn").click();}
-    });
+        // fix party stuff
+        $('#gamemode').on('change', function() {
+            if (this.value == ":party") {$("#create-party-btn").click();}
+        });
 
-    // ADS
-    $("#main-panel").append('<div id="kittyAds"></div>');
-    $("#kittyAds").load("https://raw.githubusercontent.com/KindKitty/OGARio-KITTY-mod/master/banner.html");
+        // ADS
+        $("#main-panel").append('<div id="kittyAds"></div>');
+        $("#kittyAds").load("https://raw.githubusercontent.com/KindKitty/OGARio-KITTY-mod/master/banner.html");
 
-    // ANNOUNCEMENTS
-    toastr["info"]('KITTY mod v'+modVersion+': Fixed autorespawn and auto free coins!! Enjoy! :D');
-    toastr["info"]('Don\'t forget to share! </br>My website: <a target="_blank" href="https://kindkitty.github.io/OGARio-KITTY-mod/">LINK</a>');
+        // ANNOUNCEMENTS
+        toastr["info"]('KITTY mod v'+modVersion+': Fixed autorespawn and auto free coins!! Enjoy! :D');
+        toastr["info"]('Don\'t forget to share! </br>My website: <a target="_blank" href="https://kindkitty.github.io/OGARio-KITTY-mod/">LINK</a>');
+    }
 }
-
+               
 var searching;
 var timerId;
 
@@ -581,7 +578,7 @@ function isValidIpAndPort(input) {
         ip.every(function (segment) {
         return validateNum(segment, 0, 255);
     });
-}
+}, 500);
 
 function validateNum(input, min, max) {
     var num = +input;
