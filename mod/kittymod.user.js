@@ -21,7 +21,7 @@ if (location.host == "agar.io" && location.pathname == "/") {
     location.href = "http://agar.io/ogario" + window.location.search + location.hash;
     //return;
 }
-function lol(){alert("lol");}
+
 var ogarioCSS =     '<link href="http://cdn.ogario.ovh/v3/ogario.v3.css?v=300" rel="stylesheet"></link>';
 var ogarioSniffJS = '<script src="http://cdn.ogario.ovh/v3/ogario.v3.sniff.js?v=300"></script>';
 var ogarioJS =      '<script src="http://cdn.ogario.ovh/v3/ogario.v3.js?v=300" charset="utf-8"></script>';
