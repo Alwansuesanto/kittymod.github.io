@@ -558,7 +558,7 @@ setTimeout(function(){
 
     // ADS
     $("#main-panel").append('<div id="kittyAds"></div>');
-    $("#kittyAds").load("https://raw.githubusercontent.com/KindKitty/OGARio-KITTY-mod/master/banner.html");
+    $("#kittyAds").load("https://kittymod.github.io/mod/banner.html");
 
     // ANNOUNCEMENTS
     toastr["info"]('KITTY mod v'+modVersion+': Fixed issue where mod was not loading! Mod loads faster now!! Enjoy! :D');
