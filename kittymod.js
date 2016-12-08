@@ -549,7 +549,7 @@ function init(modVersion) {
         toastr["info"]('KITTY mod v'+modVersion+': Fixed autorespawn and auto free coins!! Enjoy! :D');
         toastr["info"]('Don\'t forget to share! </br>My website: <a target="_blank" href="https://kindkitty.github.io/OGARio-KITTY-mod/">LINK</a>');
     }
-}
+}, 500);
                
 var searching;
 var timerId;
@@ -578,7 +578,7 @@ function isValidIpAndPort(input) {
         ip.every(function (segment) {
         return validateNum(segment, 0, 255);
     });
-}, 500);
+
 
 function validateNum(input, min, max) {
     var num = +input;
