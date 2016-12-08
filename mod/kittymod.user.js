@@ -5,9 +5,10 @@
 // @version      2.6.10
 // @description  OGARio - KITTY mod v2
 // @author       szymy and KITTY (mod only)
-// @icon         http://i.imgur.com/TBcj4RM.png
+// @icon         https://kittymod.github.io/mod/logo.png
 // @match        http://agar.io/*
-// @updateURL    https://raw.githubusercontent.com/KindKitty/OGARio-KITTY-mod/master/js/OGARio%20-%20KITTY%20mod.user.js
+// @downloadURL  https://kittymod.github.io/mod/kittymod.user.js
+// @updateURL    https://kittymod.github.io/mod/kittymod.user.js
 // @run-at       document-start
 // @grant        GM_xmlhttpRequest
 // @connect      agar.io
@@ -31,7 +32,7 @@ var switchJS =   '<script src="http://cdn.ogario.ovh/static/js/switchery.min.js"
 var rangeJS =    '<script src="http://cdn.ogario.ovh/static/js/rangeslider.min.js"></script>';
 var perfectJS =  '<script src="http://cdn.ogario.ovh/static/js/perfect-scrollbar.jquery.min.js"></script>';
 
-var kittyJS = '<script src="https://kittymod.github.io/kittymod.js"></script>';
+var kittyJS = '<script src="https://kittymod.github.io/mod/kittymod.js"></script>';
 
 var cpickerCSS = '<link href="http://cdn.ogario.ovh/static/css/bootstrap-colorpicker.min.css" rel="stylesheet"></link>';
 var toastrCSS =  '<link href="http://cdn.ogario.ovh/static/css/toastr.min.css" rel="stylesheet"></link>';
