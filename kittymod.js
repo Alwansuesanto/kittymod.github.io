@@ -2,9 +2,6 @@
 * KITTY mod
 **********/
 
-function lol(){console.log("1LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOL");}
-
-var modVersion = GM_info.script.version;
 var currentIP = "0.0.0.0:0";
 var currentToken = "";
 
