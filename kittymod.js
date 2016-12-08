@@ -13,9 +13,8 @@ var musicPlayer;
 var originalDeath;
 
 function init(modVersion) {
+setTimeout(function(){
 
-    setTimeout(function(){
-        
     // change buttons styles
     $("button:contains('Spectate')").html('<span class="glyphicon glyphicon-globe"></span>').attr('data-toggle', "tooltip").prop('title', 'Spectate');
     $("button:contains('Logout')").html('<span class="glyphicon glyphicon-off"></span>').attr('data-toggle', "tooltip").prop('title', 'Logout');
@@ -67,6 +66,22 @@ function init(modVersion) {
     $("#music").replaceWith('<div id="music" class="menu-panel" style="display: none;"><div class="agario-panel"><h5 class="main-color">Youtube player</h5>' +
                             '<iframe id="musicFrame" width="320" height="180" src="' + getEmbedUrl(initialMusicUrl) + '" frameborder="0" allowfullscreen=""></iframe>' +
                             '<input id="musicUrl" onclick="$(this).select();" type="text" value="'+initialMusicUrl+'" class="form-control" data-toggle="tooltip" data-placement="right" data-original-title="Paste your video/playlist here"></div></div>');
+
+    if (typeof YT !== 'undefined') {
+        musicPlayer = new YT.Player('musicFrame',{
+            events: {
+                'onStateChange': function(state) {
+                    if (state.data == 1) {
+                        $("#playerI").removeClass("fa-play-circle").addClass("fa-pause-circle");
+                        $("#playerBtn").attr('data-original-title', "Pause").tooltip('fixTitle');
+                    } else {
+                        $("#playerI").removeClass("fa-pause-circle").addClass("fa-play-circle");
+                        $("#playerBtn").attr('data-original-title', "Play").tooltip('fixTitle');
+                    }
+                }
+            }
+        });
+    }
 
     // prevent edit
     $("#musicUrl").on("input",function(){ $(this).attr("maxlength","0");});
@@ -529,28 +544,29 @@ function init(modVersion) {
     // fix main menu placement after stats
     $("#statsContinue2").click(function(){$("#main-menu > ul > li.start-tab > a").click()});
 
-        // save original death function
-        originalDeath = MC.onPlayerDeath;
+    // save original death function
+    originalDeath = MC.onPlayerDeath;
 
-        // remove leaderboard setting
-        $("#normalLb").parent().remove();
-        $("#leaderboard-hud > h4").text("v.ht/kittymod");
+    // remove leaderboard setting
+    $("#normalLb").parent().remove();
+    $("#leaderboard-hud > h4").text("v.ht/kittymod");
 
-        // fix party stuff
-        $('#gamemode').on('change', function() {
-            if (this.value == ":party") {$("#create-party-btn").click();}
-        });
+    // fix party stuff
+    $('#gamemode').on('change', function() {
+        if (this.value == ":party") {$("#create-party-btn").click();}
+    });
 
-        // ADS
-        $("#main-panel").append('<div id="kittyAds"></div>');
-        $("#kittyAds").load("https://raw.githubusercontent.com/KindKitty/OGARio-KITTY-mod/master/banner.html");
+    // ADS
+    $("#main-panel").append('<div id="kittyAds"></div>');
+    $("#kittyAds").load("https://raw.githubusercontent.com/KindKitty/OGARio-KITTY-mod/master/banner.html");
 
-        // ANNOUNCEMENTS
-        toastr["info"]('KITTY mod v'+modVersion+': Fixed autorespawn and auto free coins!! Enjoy! :D');
-        toastr["info"]('Don\'t forget to share! </br>My website: <a target="_blank" href="https://kindkitty.github.io/OGARio-KITTY-mod/">LINK</a>');
-    
+    // ANNOUNCEMENTS
+    toastr["info"]('KITTY mod v'+modVersion+': Fixed autorespawn and auto free coins!! Enjoy! :D');
+    toastr["info"]('Don\'t forget to share! </br>My website: <a target="_blank" href="https://kindkitty.github.io/OGARio-KITTY-mod/">LINK</a>');
+
 }, 500);
-               
+}
+
 var searching;
 var timerId;
 
@@ -578,7 +594,7 @@ function isValidIpAndPort(input) {
         ip.every(function (segment) {
         return validateNum(segment, 0, 255);
     });
-
+}
 
 function validateNum(input, min, max) {
     var num = +input;
@@ -1073,22 +1089,4 @@ function getEmbedUrl(url) {
         return false;
     }
 
-}
-
-function onYouTubeIframeAPIReady() {
-        if (typeof YT !== 'undefined') {
-        musicPlayer = new YT.Player('musicFrame',{
-            events: {
-                'onStateChange': function(state) {
-                    if (state.data == 1) {
-                        $("#playerI").removeClass("fa-play-circle").addClass("fa-pause-circle");
-                        $("#playerBtn").attr('data-original-title', "Pause").tooltip('fixTitle');
-                    } else {
-                        $("#playerI").removeClass("fa-pause-circle").addClass("fa-play-circle");
-                        $("#playerBtn").attr('data-original-title', "Play").tooltip('fixTitle');
-                    }
-                }
-            }
-        });
-    }
 }
