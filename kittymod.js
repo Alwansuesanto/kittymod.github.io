@@ -12,6 +12,10 @@ var musicPlayer;
 
 var originalDeath;
 
+function onYouTubeIframeAPIReady() {
+        alert("lol");
+      }
+
 function init(modVersion) {
 
     // change buttons styles
