@@ -1,5 +1,5 @@
 /**********
- * KITTY mod
+ * CUNGKRINGS mod
  **********/
 
 var currentIP = "0.0.0.0:0";
@@ -564,7 +564,7 @@ function init(modVersion) {
 
         // remove leaderboard setting
         $("#normalLb").parent().remove();
-        $("#leaderboard-hud > h4").text("v.ht/kittymod");
+        $("#leaderboard-hud > h4").text("cungkrings");
 
         // fix party stuff
         $('#gamemode').on('change', function () {
@@ -574,11 +574,11 @@ function init(modVersion) {
         });
 
         // ADS
-        $("#main-panel").append('<div id="kittyAds"></div>');
+        $("#main-panel").append('<div id="cungkringsAds"></div>');
         $("#kittyAds").load("https://kittymod.github.io/mod/banner.html");
 
         // ANNOUNCEMENTS
-        toastr["info"]('KITTY mod v' + modVersion + ': Fixed issue where mod was not loading! Mod loads faster now!! Enjoy! :D');
+        toastr["info"]('CUNGKRINGS mod v' + modVersion + ': Fixed issue where mod was not loading! Mod loads faster now!! Enjoy! :D');
         toastr["info"]('Don\'t forget to share! </br>My website: <a target="_blank" href="https://kittymod.github.io/">LINK</a>');
 
     }, 500);
